@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+
+<style>
+body {
+    margin:0;
+    font-family:Arial;
+    background:#0b1220;
+    color:white;
+}
+
+.sidebar {
+    width:220px;
+    height:100vh;
+    background:#111827;
+    position:fixed;
+    padding:20px;
+}
+
+.main {
+    margin-left:240px;
+    padding:20px;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.card {
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.card:hover {
+    background:#334155;
+    transform:scale(1.05);
+}
+
+a {
+    color:white;
+    text-decoration:none;
+    display:block;
+    margin:10px 0;
+}
+</style>
+
+</head>
+<body>
+
+<div class="sidebar">
+<h2>ADMIN</h2>
+<a href="/dashboard">Dashboard</a>
+<a href="/logout">Logout</a>
+</div>
+
+<div class="main">
+
+<h1>Welcome {{ user }} (ADMIN)</h1>
+
+<div class="grid">
+<div class="card">📊 Reports</div>
+<div class="card">👥 Users</div>
+<div class="card">📈 Analytics</div>
+<div class="card">🔐 Security Logs</div>
+<div class="card">⚙️ Settings</div>
+<div class="card">🧾 Audit Logs</div>
+</div>
+
+</div>
+
+</body>
+</html>

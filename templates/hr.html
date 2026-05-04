@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HR Dashboard</title>
+
+<style>
+body {
+    margin:0;
+    font-family:Arial;
+    background:#0b1220;
+    color:white;
+}
+
+.sidebar {
+    width:220px;
+    height:100vh;
+    background:#111827;
+    position:fixed;
+    padding:20px;
+}
+
+.main {
+    margin-left:240px;
+    padding:20px;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.card {
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="sidebar">
+<h2>HR</h2>
+<a href="/dashboard">Dashboard</a>
+<a href="/logout">Logout</a>
+</div>
+
+<div class="main">
+
+<h1>Welcome {{ user }} (HR)</h1>
+
+<div class="grid">
+<div class="card">📅 Attendance</div>
+<div class="card">👨‍💼 Employees</div>
+<div class="card">💰 Payroll</div>
+<div class="card">📄 Leaves</div>
+<div class="card">⏰ Timings</div>
+<div class="card">📊 Reports</div>
+</div>
+
+</div>
+
+</body>
+</html>
